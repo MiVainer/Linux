@@ -6,7 +6,7 @@ sudo useradd --system --user-group --shell /usr/sbin/nologin lfapp
 Создаём директорию и файлы сервиса, накидываем права
 sudo install -d -m 0750 -o root -g lfapp /opt/lf-app
 sudo install -d -m 0750 -o root -g lfapp /opt/lf-app/public
-echo '<h1> Linux Factory working </h1>' | sudo tee /opt/lf-app/public/index.html >/dev/null
+echo 'Linux Factory working' | sudo tee /opt/lf-app/public/index.html >/dev/null
 sudo chmod 640 /opt/lf-app/public/index.html
 
 Systemd пересчитывает конфигурационные файлы:
