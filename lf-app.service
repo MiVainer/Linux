@@ -4,10 +4,10 @@ After=network.target
 
 [Service]
 Type=simple
-User=miapp
-Group=miapp
-WorkingDirectory=/opt/mi-app
-ExecStart=/usr/bin/python3 -m http.server 8080 --directory /opt/mi-app/public
+User=lfapp
+Group=lfapp
+WorkingDirectory=/opt/lf-app
+ExecStart=/usr/bin/python3 -m http.server 8080 --directory /opt/lf-app/public
 Restart=on-failure
 
 [Install]
