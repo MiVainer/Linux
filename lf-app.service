@@ -1,0 +1,14 @@
+[Unit]
+Description = Linux Factory test app
+After=network.target
+
+[Service]
+Type=simple
+User=miapp
+Group=miapp
+WorkingDirectory=/opt/mi-app
+ExecStart=/usr/bin/python3 -m http.server 8080 --directory /opt/mi-app/public
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
