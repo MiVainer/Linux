@@ -1,2 +1,0 @@
-# Linux
-Learning linux
