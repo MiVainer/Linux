@@ -2,7 +2,7 @@
 set -Eeuo pipefail
 
 #Проверка работоспособности сервиса
-if systemctl is-active --quiet mi-app.service; then
+if systemctl is-active --quiet lf-app.service; then
     echo "Сервис работает"
 else
     echo "Сервис не работает"
@@ -22,4 +22,4 @@ curl -f http://127.0.0.1:8080
 
 echo "----------------------------------------------------------------"
 # Проверяем от какого пользователя работает сервис
-systemctl show mi-app.service | grep -E '^(User|Group)='
+systemctl show lf-app.service | grep -E '^(User|Group)='

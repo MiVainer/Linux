@@ -9,7 +9,8 @@
 sudo install -d -m 0750 -o root -g lfapp /opt/lf-app  
 sudo install -d -m 0750 -o root -g lfapp /opt/lf-app/public  
 echo 'Linux Factory working' | sudo tee /opt/lf-app/public/index.html >/dev/null  
-sudo chmod 640 /opt/lf-app/public/index.html```  
+sudo chown root:lfapp /opt/lf-app/public/index.html  
+sudo chmod 0640 /opt/lf-app/public/index.html```  
 
 ##Systemd пересчитывает конфигурационные файлы:  
 `sudo systemctl daemon-reload`  
